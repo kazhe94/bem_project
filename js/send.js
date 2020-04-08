@@ -8,11 +8,11 @@ $(function(){
       data: that.serialize()
     }).done(function() {
       that.find("input").val("");
-      $('.modal-wrapper').removeClass('modal-active');
+      $('.modal').removeClass('modal_active');
         $('body').removeClass('stop-scroll');
-        $('.popup-container').css('display','block');
+        $('.popup').css('display','block');
         setTimeout(function(){
-          $('.popup-container').css('display','none')
+          $('.popup').css('display','none')
         },3000);
       that.trigger("reset");
     });

@@ -92,7 +92,7 @@
   width: 100%; }
 
 /* =====modal===== */
-.modal-wrapper {
+.modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -117,11 +117,11 @@
   opacity: 0;
   visibility: hidden; }
 
-.modal-active {
+.modal_active {
   opacity: 1;
   visibility: visible; }
 
-.modal-form-wrapper {
+.modal__form-wrapper {
   position: relative;
   border: 2px solid #f53f4f;
   padding: 30px 70px;
@@ -137,45 +137,47 @@
   -ms-flex-align: center;
   align-items: center; }
   @media screen and (max-width: 767px) {
-    .modal-form-wrapper {
+    .modal__form-wrapper {
       padding: 50px 20px; } }
 
-.form-text {
+.modal__form-text {
   text-transform: uppercase;
   text-align: center; }
 
-.modal-form {
+.form {
   padding: 30px; }
 
-label {
+.form__input-label {
   font-size: 12px;
-  display: block; }
-
-.input {
   display: block;
-  padding: 10px;
+  margin-bottom: 20px; }
+
+.form__input {
+  display: block;
+  padding: 20px;
   width: 300px;
-  margin-bottom: 20px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
-  .input:last-child {
-    margin-bottom: 0; }
   @media screen and (max-width: 767px) {
-    .input {
+    .form__input {
       width: 210px; } }
 
-.form-button {
+.form__button {
   background-color: #ff4e2e;
   color: #fff;
   font-size: 20px;
   width: 300px;
   padding: 12px 0;
-  border: transparent; }
+  border: 1px solid transparent; }
   @media screen and (max-width: 767px) {
-    .form-button {
+    .form__button {
       width: 210px; } }
+  .form__button:hover {
+    color: #ff4e2e;
+    background-color: #fff;
+    border-color: #ff4e2e; }
 
-.close-button {
+.modal__close-button {
   display: block;
   position: absolute;
   width: 30px;
@@ -184,23 +186,69 @@ label {
   right: 10px;
   cursor: pointer; }
 
-.cross:before,
-.cross:after {
+.modal__cross:before,
+.modal__cross:after {
   content: '';
   width: 100%;
   height: 3px;
   display: block;
   background-color: #000; }
 
-.cross:before {
+.modal__cross:before {
   -webkit-transform: rotate(-45deg) translateY(50%);
   -ms-transform: rotate(-45deg) translateY(50%);
   transform: rotate(-45deg) translateY(50%); }
 
-.cross:after {
+.modal__cross:after {
   -webkit-transform: rotate(45deg) translateY(-50%);
   -ms-transform: rotate(45deg) translateY(-50%);
   transform: rotate(45deg) translateY(-50%); }
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  display: none;
+  width: 500px;
+  height: 400px;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  margin: 0 auto;
+  -webkit-transform: translateY(50%);
+  -ms-transform: translateY(50%);
+  transform: translateY(50%);
+  background-color: #fff;
+  font-size: 40px; }
+  .popup__title {
+    font-size: 50px;
+    letter-spacing: 10px; }
+  .popup__text {
+    font-size: 24px;
+    text-align: center;
+    margin-top: 50px;
+    line-height: 40px; }
+
+.popup__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 20px;
+  height: 100%;
+  border: 2px solid #f26522; }
 
 /* ==========flow elements============ */
 .flow-elements {
@@ -412,52 +460,6 @@ label {
     left: 35%;
     -webkit-transform: rotate(-15deg) scale(0.8);
     transform: rotate(-15deg) scale(0.8); } }
-
-.popup-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 100;
-  display: none;
-  width: 500px;
-  height: 400px;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
-  margin: 0 auto;
-  -webkit-transform: translateY(50%);
-  -ms-transform: translateY(50%);
-  transform: translateY(50%);
-  background-color: #fff;
-  font-size: 40px; }
-
-.popup-body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  padding: 20px;
-  height: 100%;
-  border: 2px solid #f26522; }
-  .popup-body__title {
-    font-size: 50px;
-    letter-spacing: 10px; }
-  .popup-body__text {
-    font-size: 24px;
-    text-align: center;
-    margin-top: 50px;
-    line-height: 40px; }
 
 input.error {
   border: 2px solid red; }

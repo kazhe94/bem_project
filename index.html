@@ -5,7 +5,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Евгений Щербаков - создание сайтов</title>
 	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" href="css/swiper.min.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
@@ -15,55 +14,61 @@
 </head>
 <body>
 	<!-- =============header============= -->
-	<header>
-		<div class="header-container">
-			<a href="#" class="menu-btn" aria-label="кнопка меню">
+	<header class="header">
+		<div class="header__container">
+			<a class="menu-btn" href="#" aria-label="кнопка меню">
 				<span></span>
 			</a>
-			<nav class="nav-menu">
-				<ul>
-					<li><a href="#link-services">Услуги</a></li>
-					<li><a href="#link-portfolio">Портфолио</a></li>
-					<li><a href="#link-prices">Стоимость</a></li>
+			<nav class="header__menu">
+				<ul class=header__list>
+					<li><a class="header__link" href="#link-services">Услуги</a></li>
+					<li><a class="header__link" href="#link-portfolio">Портфолио</a></li>
+					<li><a class="header__link" href="#link-prices">Стоимость</a></li>
 				</ul>
 			</nav>	
-			<address>
-				<a class="phone" href="tel:+79992483537">+7 (999) 248-35-37</a>
+			<address class="header__contacts address">
+				<a class="header__phone phone" href="tel:+79992483537">+7 (999) 248-35-37</a>
 				<button class="callback-btn btn get-form">Заказать звонок</button>
-				<button class="mobile-callback-btn get-form" aria-label="заказать звонок"></button>
+				<button class="header__mobile-callback-btn get-form" aria-label="заказать звонок"></button>
 			</address>
 		</div>
-	</header>	
+	</header>
 
 	<!-- =============modal============= -->
-	<div class="modal-wrapper">
-		<div class="modal-form-wrapper">
-			<h3 class="form-title form-text">Укажите ваши контакты</h3>
-			<h5 class="form-subtitle form-text">И я свяжусь с вами</h5>
-			<form id="form" action="send.php" class="modal-form" method="POST">
-				<label for="name-input" class="input-label">Как вас зовут?</label>
-				<input id="name-input" type="text" class="input" name="name">
-				<label for="phone-input" class="input-label">Введите ваш номер телефона</label>
-				<input id="phone-input" type="tel" class="input" name="phone" placeholder="+7(___)-___-__-__">
-				<label for="email-input" class="input-label">Введите ваш email</label>
-				<input id="email-input" type="email" class="input" name="email" placeholder="your_mail@example.com">
-				<button class="form-button">Заказать звонок</button>
+	<div class="modal">
+		<div class="modal__form-wrapper">
+			<h3 class="modal__form-text">Укажите ваши контакты</h3>
+			<h5 class="modal__form-text">И я свяжусь с вами</h5>
+			<form class="form" id="form" action="send.php" method="POST">
+				<label class="form__input-label" for="name-input">
+					<span>Как вас зовут?</span>
+					<input class="form__input" id="name-input" type="text" name="name">
+				</label>
+				<label class="form__input-label" for="phone-input">
+					<span>Введите ваш номер телефона</span>
+					<input class="form__input" id="phone-input" type="tel" name="phone" placeholder="+7(___)-___-__-__">
+				</label>		
+				<label class="form__input-label" for="email-input">
+					<span>Введите ваш email</span>
+					<input class="form__input" id="email-input" type="email" name="email" placeholder="your_mail@example.com">
+				</label>			
+				<button class="form__button">Заказать звонок</button>
 			</form>
-			<a class="close-button" aria-label="кнопка закрытия">
-				<span class="cross"></span>
+			<a class="modal__close-button" aria-label="кнопка закрытия">
+				<span class="modal__cross"></span>
 			</a>
 		</div>
 	</div>
-	<div class="popup-container">
-		<div class="popup-body">
-			<h4 class="popup-body__title">Спасибо</h4>
-			<p class="popup-body__text">Ваша заявка принята, мы свяжемся с вами в ближайшее время</p>
+	<div class="popup">
+		<div class="popup__body">
+			<h4 class="popup__title">Спасибо</h4>
+			<p class="popup__text">Ваша заявка принята, мы свяжемся с вами в ближайшее время</p>
 		</div>		
 	</div>		
 
 
-	<!-- =============main============= -->
-	<main>
+	<!-- =============first block============= -->
+	<main class="main">
 		<section class="first-block">	
 				<span class="elem1 flow-elements" aria-label="летающий тег">#</span>
 				<span class="elem2 flow-elements" aria-label="летающий тег">{ }</span>
@@ -71,124 +76,124 @@
 				<span class="elem4 flow-elements" aria-label="летающий тег">&lt;div&gt;</span>
 				<span class="elem5 flow-elements" aria-label="летающий тег">&lt;div&gt;</span>
 			<div class="fixed-container">
-				<div class="first-block-content">
-					<div class="first-block-text">
-						<h1 class="main-title">Евгений Щербаков</h1>
-						<h2 class="main-subtitle">Frontend-разработчик и верстальщик</h2>
+				<div class="first-block__content">
+					<div class="first-block__text">
+						<h1 class="page-title">Евгений Щербаков</h1>
+						<h2 class="page-subtitle">Frontend-разработчик и верстальщик</h2>
 						<button class="more-btn get-form">Узнать больше</button>
 					</div>
 				</div>	
 				<div class="img-wrapper">
-					<img src="img/man.png" alt="developer" class="фото">
-					<img src="img/ellipse.png" alt="" class="эллипс">
+					<img class="img-wrapper__photo" src="img/man.png" alt="фото">
+					<img class="img-wrapper__background" src="img/ellipse.png" alt="эллипс">
 				</div>				
 			</div>
 		</section>
 
 		<!-- =================second block==================== -->
-		<section class="second-block" id="link-services">
+		<section class="second-block section" id="link-services">
 			<div class="fixed-container">
-				<div class="second-block-content">
+				<div class="second-block__content  section-content">
 					<h3 class="section-title">Что я умею</h3>
-					<div class="features-wrapper">
-						<ul class="features-list">
-							<li>
-								<img src="img/features1.png" alt="">
-								<p class="feature-description">Вёрстка лендинг–страниц<br>и сайтов любой сложности</p>
+					<div class="features">
+						<ul class="features__list">
+							<li class="features__item">
+								<img class="features__icon" src="img/features1.png">
+								<p class="features__description">Вёрстка лендинг–страниц<br>и сайтов любой сложности</p>
 							</li>
-							<li>
-								<img src="img/features2.png" alt="">
-								<p class="feature-description">Адаптивная вёрстка под все<br>браузеры и устройства</p>
+							<li class="features__item">
+								<img class="features__icon" src="img/features2.png">
+								<p class="features__description">Адаптивная вёрстка под все<br>браузеры и устройства</p>
 							</li>
-							<li>
-								<img src="img/features3.png" alt="">
-								<p class="feature-description">Frontend–разработка<br>и программирование</p>
+							<li class="features__item">
+								<img class="features__icon" src="img/features3.png">
+								<p class="features__description">Frontend–разработка<br>и программирование</p>
 							</li>
-							<li>
-								<img src="img/features4.png" alt="">
-								<p class="feature-description">Исправление и доработка<br>существующей вёрстки</p>
+							<li class="features__item">
+								<img class="features__icon" src="img/features4.png">
+								<p class="features__description">Исправление и доработка<br>существующей вёрстки</p>
 							</li>
 						</ul>
 					</div>
-					<button class="more-btn section-btn get-form">Узнать стоимость</button>
 				</div>
+				<button class="more-btn section-btn get-form">Узнать стоимость</button>
 			</div>
 		</section>
 
 		<!-- =====================3rd block==================== -->
-		<section class="third-block" id="link-portfolio">
+		<section class="third-block section" id="link-portfolio">
 			<div class="fixed-container">
-				<div class="third-block-content">
+				<div class="third-block__content section-content">
 					<h3 class="section-title">Примеры моих работ</h3>
-					<div class="portfolio-wrapper swiper-container">
-						<ul class="portfolio-slider swiper-wrapper">
-							<li class="portfolio-slider__item swiper-slide">
-								<img src="img/portfolio1.png" alt="Сайт психолога Веры Антоновой" class="portfolio-img">
-								<p class="portfolio-slider__item_description">Сайт психолога Веры Антоновой</p>
+					<div class="portfolio swiper-container">
+						<ul class="portfolio__slider swiper-wrapper">
+							<li class="portfolio__item swiper-slide">
+								<img class="portfolio__img" src="img/portfolio1.png" alt="Сайт психолога Веры Антоновой">
+								<p class="portfolio__item-description">Сайт психолога Веры Антоновой</p>
 							</li>
 							<li class="portfolio-slider__item swiper-slide">
-								<img src="img/portfolio2.png" alt="Сайт магазина детской одежды" class="portfolio-img">
-								<p class="portfolio-slider__item_description">Сайт магазина детской одежды</p>
+								<img class="portfolio__img" src="img/portfolio2.png" alt="Сайт магазина детской одежды">
+								<p class="portfolio__item-description">Сайт магазина детской одежды</p>
 							</li>
 							<li class="portfolio-slider__item swiper-slide">
-								<img src="img/portfolio3.png" alt="Сайт магазина «Рыболов»" class="portfolio-img">
-								<p class="portfolio-slider__item_description">Сайт магазина «Рыболов»</p>
+								<img class="portfolio__img" src="img/portfolio3.png" alt="Сайт магазина «Рыболов»">
+								<p class="portfolio__item-description">Сайт магазина «Рыболов»</p>
 							</li>
 						</ul>
 						<div class="swiper-pagination dots"></div>
 					</div>
 					<span class="arrow arrow-left" aria-label="стрелка влево"></span>
 					<span class="arrow arrow-right" aria-label="стрелка вправо"></span>
-					<button class="more-btn section-btn get-form">Заказать проект</button>
 				</div>
+				<button class="more-btn section-btn get-form">Заказать проект</button>
 			</div>
 		</section>
 
 		<!-- =====================4th block==================== -->
-		<section class="forth-block" id="link-prices">
-			<div class="forth-block-text">
-				<h3 class="forth-block-title">Адаптивная вёрстка под все устройства	и&nbsp;браузеры от 1000 рублей всего за 4&nbsp;часа.*</h3>
-				<p class="forth-block-subtitle">* Срок и стоимость могут отличаться от заявленных и рассчитываются  индивидуально,<br>в зависимости от сложности задач.</p>
+		<section class="forth-block section" id="link-prices">
+			<div class="forth-block__text">
+				<h3 class="forth-block__title">Адаптивная вёрстка под все устройства	и&nbsp;браузеры от 1000 рублей всего за 4&nbsp;часа.*</h3>
+				<p class="forth-block__subtitle">* Срок и стоимость могут отличаться от заявленных и рассчитываются  индивидуально,<br>в зависимости от сложности задач.</p>
 			</div>
-			<div class="forth-block-elements">
-				<span class="element1 animated infinite" aria-label="теги">#</span>
-				<span class="element2 animated infinite" aria-label="теги">{}</span>
-				<span class="element3 animated infinite" aria-label="теги">&lt;/&gt;</span>
-				<span class="element4 animated infinite" aria-label="теги">{ }</span>
-				<span class="element5 animated infinite" aria-label="теги">&lt;div&gt;</span>
+			<div class="forth-block__elements">
+				<span class="element1" aria-label="теги">#</span>
+				<span class="element2" aria-label="теги">{}</span>
+				<span class="element3" aria-label="теги">&lt;/&gt;</span>
+				<span class="element4" aria-label="теги">{ }</span>
+				<span class="element5" aria-label="теги">&lt;div&gt;</span>
 			</div>
 		</section>
 	</main>
 
 
 	<!-- =====================footer==================== -->
-	<footer>
+	<footer class="footer">
 		<div class="fixed-container">
-			<div class="footer-content">
-				<nav class="footer-nav">
+			<div class="footer__content">
+				<nav class="footer__nav">
 					<ul>
-						<li><a href="#link-services">Услуги</a></li>
-						<li><a href="#link-portfolio">Портфолио</a></li>
-						<li><a href="#link-prices">Стоимость</a></li>
+						<li><a class="footer__link" href="#link-services">Услуги</a></li>
+						<li><a class="footer__link" href="#link-portfolio">Портфолио</a></li>
+						<li><a class="footer__link" href="#link-prices">Стоимость</a></li>
 					</ul>
 				</nav>
-				<address class="footer-contacts">
-					<a href="tel:+74999957755" class="footer-phone">+7 (499) 995-77-55</a>
-					<a href="mailto:dmitry@alekseev.com" class="mail">dmitry@alekseev.com</a>
+				<address class="footer__contacts address">
+					<a class="footer__phone footer-contact" href="tel:+74999957755">+7 (499) 995-77-55</a>
+					<a class="footer__mail footer-contact" href="mailto:dmitry@alekseev.com">dmitry@alekseev.com</a>
 				</address>
 				<div class="social">
-					<button class="callback-btn get-form">Заказать звонок</button>
-					<ul>
-						<li><a class="social-link vk" target="_blank" href="https://vk.com/leon47rus" aria-label="страница вконтакте"></a></li>
-						<li><a class="social-link facebook" target="_blank" href="https://www.facebook.com/evgenii.sherbakov.3" aria-label="страница фэйсбук"></a></li>
-						<li><a class="social-link twitter" target="_blank" href="#" aria-label="страница твиттер"></a></li>
-						<li><a class="social-link instagram" target="_blank" href="https://www.instagram.com/kazhe94/" aria-label="страница инстаграм"></a></li>
+					<button class="callback-btn footer-btn get-form">Заказать звонок</button>
+					<ul class="social__list">
+						<li><a class="social__link vk" target="_blank" href="https://vk.com/leon47rus" aria-label="страница вконтакте"></a></li>
+						<li><a class="social__link facebook" target="_blank" href="https://www.facebook.com/evgenii.sherbakov.3" aria-label="страница фэйсбук"></a></li>
+						<li><a class="social__link twitter" target="_blank" href="#" aria-label="страница твиттер"></a></li>
+						<li><a class="social__link instagram" target="_blank" href="https://www.instagram.com/kazhe94/" aria-label="страница инстаграм"></a></li>
 					</ul>
 				</div>
 			</div>
 		</div>
-		<div class="copyright-bar">
-			<p class="copyright">&copy; Евгений Щербаков, 2019-2020</p>
+		<div class="copyright">
+			<p class="copyright__text">&copy; Евгений Щербаков, 2019-2020</p>
 		</div>
 	</footer>
 	<script src="js/swiper.min.js"></script>

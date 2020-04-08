@@ -1,14 +1,14 @@
 $( document ).ready(function() {
     $('.menu-btn').on('click', function(e){
         e.preventDefault;
-        $('.nav-menu').toggleClass('active');
+        $('.header__list').toggleClass('header__list_active');
         $('.menu-btn').toggleClass('menu-btn_active')
         $('body').toggleClass('stop-scroll');
     });
     $('a[href^="#link"]').on('click', function(e){
         e.preventDefault();
-        if ($('.nav-menu').hasClass('active')) {
-            $('.nav-menu').removeClass('active');
+        if ($('.header__list').hasClass('header__list_active')) {
+            $('.header__list').removeClass('header__list_active');
         }
         if ($('.menu-btn').hasClass('menu-btn_active')) {
             $('.menu-btn').removeClass('menu-btn_active');
@@ -42,12 +42,12 @@ $( document ).ready(function() {
               slidesPerView: 1,
               spaceBetween: 30,
             },
-            // when window width is >= 480px
+            // when window width is >= 850px
             850: {
               slidesPerView: 2,
               spaceBetween: 30,  
             },
-            // when window width is >= 640px
+            // when window width is >= 1170px
             1170: {
               slidesPerView: 3,
               spaceBetween: 30,
@@ -55,16 +55,16 @@ $( document ).ready(function() {
           }
       });
       $('.get-form').on('click', function(){
-          $('.modal-wrapper').addClass('modal-active');
+          $('.modal').addClass('modal_active');
           $('body').addClass('stop-scroll');
       });
-      $('.close-button').on('click', function(){
-        $('.modal-wrapper').removeClass('modal-active');
+      $('.modal__close-button').on('click', function(){
+        $('.modal').removeClass('modal_active');
         $('body').removeClass('stop-scroll');
       });
-      $('.modal-wrapper').on('click', function(event){
+      $('.modal').on('click', function(event){
         if (event.target == this) {
-          $('.modal-wrapper').removeClass('modal-active');
+          $('.modal').removeClass('modal_active');
           $('body').removeClass('stop-scroll');
         }
         });
