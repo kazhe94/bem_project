@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ирвас - остекление балконов и лоджий</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap&subset=cyrillic,cyrillic-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"/>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/countdown.css">
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- -----------------------header---------------------- -->
+    <header>
+        <div class="fixed-container">
+            <div class="header-content">
+                <img src="assets/img/logo.png" alt="irvas" class="logo-img">
+                <p class="logo-text">Остекление балконов и лоджий в Москве и Московской области</p>
+                <button class="header-btn">
+                    <img src="assets/img/edit.png" alt="Вызвать замерщика" class="header-btn-logo">
+                    <p>Вызвать замерщика</p>
+                </button>
+                <div class="work-time">
+                    <span>без выходных</span>
+                    <div class="work-time-mode">9:00 - 18:00</div>
+                </div>
+                <address>
+                    <a href="tel:+74956466171" class="phone">+7 (495) 646-61-71</a>
+                    <a href="#callback" class="callback-btn modalbox">заказать обратный звонок</a>   
+                </address>
+                <div id="callback">
+                    <form action="mail.php" class="main-form" id="callback-form" method="POST">
+                        <h3 class="form-title">Введите ваш телефон<br><span>и мы вам позвоним</span></h3>
+                        <input type="text" class="name-input easyui-textbox" label="Name:" name="name" required="true" placeholder="Введите ваше имя">
+                        <input type="text" class="phone-input" placeholder="+7 (___) ___-__-__">
+                        <button class="form-btn" id="callback-btn">Заказать обратный звонок!</button>
+                        <small>Ваши данные конфиденциальны</small>
+                    </form> 
+                </div>                
+            </div>
+        </div>
+    </header>
+
+    <!-------------------------------------------- first block--------------------------------------------------- -->
+    <main>
+        <section class="first-block">
+            <div class="fixed-container">
+                <div class="first-block-content">
+                    <div class="left-container">
+                        <div class="first-block-title">
+                            <h1 class="main-title">Остекление балконов "под ключ" <br><span>за 12800 рублей</span></h1>
+                        </div>   
+                        <div class="advantages">
+                            <ul>
+                                <li>
+                                    <img src="assets/img/quality.png" alt="высокое качество">
+                                    <p>высокое<br>качество</p>
+                                </li>
+                                <li>
+                                    <img src="assets/img/time.png" alt="высокое качество" class="stupid-image">
+                                    <p>быстрый<br>монтаж</p>
+                                </li>
+                                <li>
+                                    <img src="assets/img/warranty.png" alt="высокое качество">
+                                    <p>гарантия<br>3 года</p>
+                                </li>
+                                <li>
+                                    <img src="assets/img/waste.png" alt="высокое качество">
+                                    <p>вывоз<br>мусора</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>                     
+                    <form  action="mail.php" method="POST" class="main-form">
+                        <h3 class="form-title">Запишитесь сегодня на <br><span>бесплатный замер</span></h3>
+                        <input type="text" class="name-input easyui-textbox" label="Name:" name="name" required="true" placeholder="Введите ваше имя">
+                        <input type="text" class="phone-input" name="phone" required="true" placeholder="+7 (___) ___-__-__">
+                        <button type="submit" class="form-btn">Вызвать замерщика!</button>
+                        <small>Ваши данные конфиденциальны</small>
+                    </form> 
+                </div>                          
+            </div>
+        </section>
+
+            <!-------------------------------------------- 2nd block--------------------------------------------------- -->
+
+        <section class="second-block">
+            <div class="fixed-container">
+                <div class="second-block-container">
+                    <h2 class="section-title">Остекление балконов и лоджий</h2>
+                    <p class="line"><img src="assets/img/line.png" alt=""></p class="line">
+                    <div class="tabs">
+                        <ul>
+                            <li><img src="assets/img/types/types_1.png" alt=""><a href="#tabs-1" class="active active-link">Деревянное остекление</a></li>
+                            <li><img src="assets/img/types/types_2.png" alt=""><a href="#tabs-2">Алюминиевое остекление</a></li>
+                            <li><img src="assets/img/types/types_3.png" alt=""><a href="#tabs-3">Остекление пластиковыми рамами</a></li>
+                            <li><img src="assets/img/types/types_4.png" alt=""><a href="#tabs-4">Французское остекление<br>(панорамное)</a></li>
+                            <li><img src="assets/img/types/types_5.png" alt=""><a href="#tabs-5">Остекление с выносом</a></li>
+                        </ul>
+                        <div id="tabs-1" class="tab-pane faded in active">
+                            <div class="window-types">
+                                <div class="cold-window window">
+                                    <h4 class="window-title">Холодное</h4>
+                                    <img src="assets/img/cold.png" alt="холодное остекление">
+                                    <ul class="benefits">
+                                        <li>Конструктивная толщина 42-58 мм</li>
+                                        <li>Остекление: полированное стекло (толщиной 4 - 5 мм)</li>
+                                        <li>Теплоизоляция: 0,07 м2 * С/Вт</li>
+                                        <li>Звукоизоляция: 20-27 дб</li>
+                                    </ul>
+                                    <div class="price-block">
+                                        <div class="space-count">2600 руб кв.м. <span>под ключ с установкой</span></div>
+                                        <button class="price-btn">рассчитать стоимость</button>
+                                    </div>
+                                </div>
+                                <div class="warm-window window">
+                                    <h4 class="window-title">Холодное</h4>
+                                    <img src="assets/img/hot.png" alt="холодное остекление">
+                                    <ul class="benefits">
+                                        <li>Конструктивная толщина профиля: 58-78 м</li>
+                                        <li>Остекление: однокамерные и двухкамерные стеклопакеты</li>
+                                        <li>Теплоизоляция: 0,63 - 1,05 м2 * С/Вт</li>
+                                        <li>Звукоизоляция: до 5 класса</li>
+                                    </ul>
+                                    <div class="price-block">
+                                        <div class="space-count">4000 руб кв.м. <span>под ключ с установкой</span></div>
+                                        <button class="price-btn">рассчитать стоимость</button>
+                                    </div>
+                                </div>
+                            </div>                           
+                        </div>
+                        <div id="tabs-2" class="tab-pane faded in">
+                            <div class="window-types">
+                                <div class="cold-window window">
+                                    <h4 class="window-title">Холодное</h4>
+                                    <img src="assets/img/cold.png" alt="холодное остекление">
+                                    <ul class="benefits">
+                                        <li>Конструктивная толщина 42-58 мм</li>
+                                        <li>Остекление: полированное стекло (толщиной 4 - 5 мм)</li>
+                                        <li>Теплоизоляция: 0,07 м2 * С/Вт</li>
+                                        <li>Звукоизоляция: 20-27 дб</li>
+                                    </ul>
+                                    <div class="price-block">
+                                        <div class="space-count">2600 руб кв.м. <span>под ключ с установкой</span></div>
+                                        <button class="price-btn">рассчитать стоимость</button>
+                                    </div>
+                                </div>
+                                <div class="warm-window window">
+                                    <h4 class="window-title">Холодное</h4>
+                                    <img src="assets/img/hot.png" alt="холодное остекление">
+                                    <ul class="benefits">
+                                        <li>Конструктивная толщина профиля: 58-78 м</li>
+                                        <li>Остекление: однокамерные и двухкамерные стеклопакеты</li>
+                                        <li>Теплоизоляция: 0,63 - 1,05 м2 * С/Вт</li>
+                                        <li>Звукоизоляция: до 5 класса</li>
+                                    </ul>
+                                    <div class="price-block">
+                                        <div class="space-count">4000 руб кв.м. <span>под ключ с установкой</span></div>
+                                        <button class="price-btn">рассчитать стоимость</button>
+                                    </div>
+                                </div>
+                            </div>     
+                        </div>
+                        <div id="tabs-3" class="tab-pane faded in">
+                            <div class="window-types">
+                                <div class="cold-window window">
+                                    <h4 class="window-title">Холодное</h4>
+                                    <img src="assets/img/cold.png" alt="холодное остекление">
+                                    <ul class="benefits">
+                                        <li>Конструктивная толщина 42-58 мм</li>
+                                        <li>Остекление: полированное стекло (толщиной 4 - 5 мм)</li>
+                                        <li>Теплоизоляция: 0,07 м2 * С/Вт</li>
+                                        <li>Звукоизоляция: 20-27 дб</li>
+                                    </ul>
+                                    <div class="price-block">
+                                        <div class="space-count">2600 руб кв.м. <span>под ключ с установкой</span></div>
+                                        <button class="price-btn">рассчитать стоимость</button>
+                                    </div>
+                                </div>
+                                <div class="warm-window window">
+                                    <h4 class="window-title">Холодное</h4>
+                                    <img src="assets/img/hot.png" alt="холодное остекление">
+                                    <ul class="benefits">
+                                        <li>Конструктивная толщина профиля: 58-78 м</li>
+                                        <li>Остекление: однокамерные и двухкамерные стеклопакеты</li>
+                                        <li>Теплоизоляция: 0,63 - 1,05 м2 * С/Вт</li>
+                                        <li>Звукоизоляция: до 5 класса</li>
+                                    </ul>
+                                    <div class="price-block">
+                                        <div class="space-count">4000 руб кв.м. <span>под ключ с установкой</span></div>
+                                        <button class="price-btn">рассчитать стоимость</button>
+                                    </div>
+                                </div>
+                            </div>     
+                        </div>
+                        <div id="tabs-4" class="tab-pane faded in">
+                            <div class="window-types">
+                                <div class="cold-window window">
+                                    <h4 class="window-title">Холодное</h4>
+                                    <img src="assets/img/cold.png" alt="холодное остекление">
+                                    <ul class="benefits">
+                                        <li>Конструктивная толщина 42-58 мм</li>
+                                        <li>Остекление: полированное стекло (толщиной 4 - 5 мм)</li>
+                                        <li>Теплоизоляция: 0,07 м2 * С/Вт</li>
+                                        <li>Звукоизоляция: 20-27 дб</li>
+                                    </ul>
+                                    <div class="price-block">
+                                        <div class="space-count">2600 руб кв.м. <span>под ключ с установкой</span></div>
+                                        <button class="price-btn">рассчитать стоимость</button>
+                                    </div>
+                                </div>
+                                <div class="warm-window window">
+                                    <h4 class="window-title">Холодное</h4>
+                                    <img src="assets/img/hot.png" alt="холодное остекление">
+                                    <ul class="benefits">
+                                        <li>Конструктивная толщина профиля: 58-78 м</li>
+                                        <li>Остекление: однокамерные и двухкамерные стеклопакеты</li>
+                                        <li>Теплоизоляция: 0,63 - 1,05 м2 * С/Вт</li>
+                                        <li>Звукоизоляция: до 5 класса</li>
+                                    </ul>
+                                    <div class="price-block">
+                                        <div class="space-count">4000 руб кв.м. <span>под ключ с установкой</span></div>
+                                        <button class="price-btn">рассчитать стоимость</button>
+                                    </div>
+                                </div>
+                            </div>     
+                        </div>
+                        <div id="tabs-5" class="tab-pane faded in">
+                            <div class="window-types">
+                                <div class="cold-window window">
+                                    <h4 class="window-title">Холодное</h4>
+                                    <img src="assets/img/cold.png" alt="холодное остекление">
+                                    <ul class="benefits">
+                                        <li>Конструктивная толщина 42-58 мм</li>
+                                        <li>Остекление: полированное стекло (толщиной 4 - 5 мм)</li>
+                                        <li>Теплоизоляция: 0,07 м2 * С/Вт</li>
+                                        <li>Звукоизоляция: 20-27 дб</li>
+                                    </ul>
+                                    <div class="price-block">
+                                        <div class="space-count">2600 руб кв.м. <span>под ключ с установкой</span></div>
+                                        <button class="price-btn">рассчитать стоимость</button>
+                                    </div>
+                                </div>
+                                <div class="warm-window window">
+                                    <h4 class="window-title">Холодное</h4>
+                                    <img src="assets/img/hot.png" alt="холодное остекление">
+                                    <ul class="benefits">
+                                        <li>Конструктивная толщина профиля: 58-78 м</li>
+                                        <li>Остекление: однокамерные и двухкамерные стеклопакеты</li>
+                                        <li>Теплоизоляция: 0,63 - 1,05 м2 * С/Вт</li>
+                                        <li>Звукоизоляция: до 5 класса</li>
+                                    </ul>
+                                    <div class="price-block">
+                                        <div class="space-count">4000 руб кв.м. <span>под ключ с установкой</span></div>
+                                        <button class="price-btn">рассчитать стоимость</button>
+                                    </div>
+                                </div>
+                            </div>     
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- --------------------------------------------------3rd block---------------------------------------- -->
+
+        <section class="third-block">
+            <div class="fixed-container">
+                <div class="third-block-container">
+                    <h2 class="section-title">ЗАКАЖИТЕ ОТДЕЛКУ БАЛКОНА СО СКИДКОЙ 60%!</h2>
+                    <p class="line"><img src="assets/img/line.png" alt=""></p>
+                    <div class="decoration-types">
+                        <ul class="type-list">
+                            <li><a href="#tab1" class="active active-decor">внутренняя отделка</a></li>
+                            <li><a href="#tab1">внешняя отделка</a></li>
+                            <li><a href="#tab1">выносное остекление</a></li>
+                            <li><a href="#tab1">крыша на балконе</a></li>
+                        </ul>
+                        <div class="decoration-content">
+                            <div class="decoration-tabs">
+                                <div class="dec-tabs faded in active" id="tab1">
+                                    <img src="assets/img/interier.png" alt="интерьер">
+                                    <div class="materials">
+                                        <ul>
+                                            <li>
+                                                <img src="assets/img/materials/material1.png" alt="">
+                                                <div class="material-description">
+                                                    <h6 class="material-title">Вагонка</h6>
+                                                    <p class="material-subtitle"><span>600 руб. кв.м.</span>с материалом</p>
+                                                </div>                                              
+                                            </li>
+                                            <li>
+                                                <img src="assets/img/materials/material2.png" alt="">
+                                                <div class="material-description">
+                                                    <h6 class="material-title">Пластиковая вагонка</h6>
+                                                    <p class="material-subtitle"><span>600 руб. кв.м.</span>с материалом</p>
+                                                </div>                                            
+                                            </li>
+                                            <li>
+                                                <img src="assets/img/materials/material3.png" alt="">
+                                                <div class="material-description">
+                                                    <h6 class="material-title">ПВХ-панели</h6>
+                                                    <p class="material-subtitle"><span>600 руб. кв.м.</span>с материалом</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <img src="assets/img/materials/material4.png" alt="">
+                                                <div class="material-description">
+                                                    <h6 class="material-title">Настил пола из ламината</h6>
+                                                    <p class="material-subtitle"><span>600 руб. кв.м.</span>с материалом</p>
+                                                </div> 
+                                            </li>
+                                            <li>
+                                                <img src="assets/img/materials/material5.png" alt="">
+                                                <div class="material-description">
+                                                    <h6 class="material-title">Настил пола из дерева</h6>
+                                                    <p class="material-subtitle"><span>600 руб. кв.м.</span>с материалом</p>
+                                                </div>                                            
+                                            </li>
+                                        </ul> 
+                                    </div>
+                                </div>                                
+                            </div>
+                            <form  action="mail.php" method="POST" class="main-form">
+                                <h3 class="form-title">Запишитесь сегодня на <br><span>бесплатный замер</span></h3>
+                                <input type="text" class="name-input easyui-textbox" label="Name:" name="name" required="true" placeholder="Введите ваше имя">
+                                <input type="text" class="phone-input" name="phone" required="true" placeholder="+7 (___) ___-__-__">
+                                <button type="submit" class="form-btn">Вызвать замерщика!</button>
+                                <small>Ваши данные конфиденциальны</small>
+                            </form> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!----------------------------------------------- forth block----------------------------------------------------------- -->
+
+        <section class="forth-block">
+            <div class="fixed-container">
+                <div class="forth-block-content">
+                    <h2 class="section-title">наши работы</h2>
+                    <p class="line"><img src="assets/img/line.png" alt=""></p>
+                    <div class="portfolio">
+                        <div class="portfolio-item">
+                            <a data-fancybox="images" href="assets/img/gallery/gallery1.png"><img class="portfolio-img" src="assets/img/gallery/gallery1.png" alt=""></a>
+                            <img class="zoom-img" data-img="" src="assets/img/gallery/zoom.png" alt="">
+                        </div>
+                        <div class="portfolio-item">
+                            <a data-fancybox="images" href="assets/img/gallery/gallery2.png"><img class="portfolio-img" src="assets/img/gallery/gallery2.png" alt=""></a>
+                            <img class="zoom-img" src="assets/img/gallery/zoom.png" alt="">
+                        </div>
+                        <div class="portfolio-item">
+                            <a data-fancybox="images" href="assets/img/gallery/gallery3.png"><img class="portfolio-img" src="assets/img/gallery/gallery3.png" alt=""></a>
+                            <img class="zoom-img" src="assets/img/gallery/zoom.png" alt="">
+                        </div>
+                        <div class="portfolio-item">
+                            <a data-fancybox="images" href="assets/img/gallery/gallery4.png"><img class="portfolio-img" src="assets/img/gallery/gallery4.png" alt=""></a>
+                            <img class="zoom-img" src="assets/img/gallery/zoom.png" alt="">
+                        </div>
+                        <div class="portfolio-item">
+                            <a data-fancybox="images" href="assets/img/gallery/gallery5.png"><img class="portfolio-img" src="assets/img/gallery/gallery5.png" alt=""></a>
+                            <img class="zoom-img" src="assets/img/gallery/zoom.png" alt="">
+                        </div>
+                        <div class="portfolio-item">
+                            <a data-fancybox="images" href="assets/img/gallery/gallery6.png"><img class="portfolio-img" src="assets/img/gallery/gallery6.png" alt=""></a>
+                            <img class="zoom-img" src="assets/img/gallery/zoom.png" alt="">
+                        </div>
+                        <div class="portfolio-item">
+                            <a data-fancybox="images" href="assets/img/gallery/gallery7.png"><img class="portfolio-img" src="assets/img/gallery/gallery7.png" alt=""></a>
+                            <img class="zoom-img" src="assets/img/gallery/zoom.png" alt="">
+                        </div>
+                        <div class="portfolio-item">
+                            <a data-fancybox="images" href="assets/img/gallery/gallery8.png"><img class="portfolio-img" src="assets/img/gallery/gallery8.png" alt=""></a>
+                            <img class="zoom-img" src="assets/img/gallery/zoom.png" alt="">
+                        </div>    
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--------------------------------------------------- 5th block---------------------------------------- -->
+        <section class="fifth-block">
+            <div class="fixed-container">
+                <div class="fifth-block-content">
+                    <h2 class="section-title">мы гарантируем вам</h2>
+                    <p class="line"><img src="assets/img/white-line.png" alt=""></p>
+                    <div class="features">
+                        <ul>
+                            <li>
+                                <img src="assets/img/features/01.png" alt="">
+                                <p class="feature-description">Высокое качество</p>
+                            </li>
+                            <li>
+                                <img src="assets/img/features/02.png" alt="">
+                                <p class="feature-description">Выполнение работ<br>под ключ</p>
+                            </li>
+                            <li>
+                                <img src="assets/img/features/03.png" alt="">
+                                <p class="feature-description">Монтаж в короткие<br>сроки</p>
+                            </li>
+                            <li>
+                                <img src="assets/img/features/04.png" alt="">
+                                <p class="feature-description">Цены<br>от производителя</p>
+                            </li>
+                            <li>
+                                <img src="assets/img/features/05.png" alt="">
+                                <p class="feature-description">Бесплатный замер<br>и консультация</p>
+                            </li>
+                            <li>
+                                <img src="assets/img/features/06.png" alt="">
+                                <p class="feature-description">Тепло и уют<br>на балконе</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!------------------------------------------------- 6th block------------------------------------------------ -->
+        <section class="sixth-block">
+            <div class="fixed-container">
+                <div class="sixth-block-content">
+                    <h2 class="section-title">Вы можете оплатить наши услуги:</h2>
+                    <div class="payment">
+                        <ul>
+                            <li>
+                                <img src="assets/img/payment1.png" alt="">
+                                <p>Наличными</p>
+                            </li>
+                            <li>
+                                <img src="assets/img/payment3.png" alt="">
+                                <p>Банковской картой</p>
+                            </li>
+                            <li>
+                                <img src="assets/img/payment2.png" alt="">
+                                <p>Безналичный расчет</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!------------------------------------------ 7th block--------------------------------------------- -->
+        <section class="seventh-block">
+            <div class="fixed-container">
+                <div class="seventh-block-content">
+                    <div class="seventh-block-left">
+                        <h2 class="discount">акция - 60%</h2>
+                        <h4 class="discount-subtitle">Успей сэкономить на остеклении!<br>Только до 23 апреля!</h4>
+                        <div class="time-counter">
+                            <h4 class="countdown-title">До завершения акции:</h4>  
+                            <div class="countdown" id="countdown">
+                                <div class="countdown-number nums">
+                                    <span class="days countdown-time num"></span>
+                                    <span class="countdown-text">дней</span>
+                                 </div>
+                                 <div class="countdown-number">
+                                     <span class="hours countdown-time"></span>
+                                     <span class="countdown-text">часов</span>
+                                 </div>
+                                 <div class="countdown-number">
+                                     <span class="minutes countdown-time"></span>
+                                     <span class="countdown-text">минут</span>
+                                 </div>
+                                 <div class="countdown-number nums">
+                                     <span class="seconds countdown-time num"></span>
+                                     <span class="countdown-text">секунд</span>
+                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="seventh-block-right">
+                        <form  action="mail.php" method="POST" class="main-form">
+                            <h3 class="form-title">Запишитесь сегодня на <br><span>бесплатный замер</span></h3>
+                            <input type="text" class="name-input easyui-textbox" label="Name:" name="name" required="true" placeholder="Введите ваше имя">
+                            <input type="text" class="phone-input" name="phone" required="true" placeholder="+7 (___) ___-__-__">
+                            <button type="submit" class="form-btn">Вызвать замерщика!</button>
+                            <small>Ваши данные конфиденциальны</small>
+                        </form> 
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!------------------------------------------ 8th block--------------------------------------------- -->
+        <section class="eigth-block">
+            <div class="fixed-container">
+                <div class="eigth-block-content">
+                    <h2 class="section-title">как нас найти</h2>
+                    <p class="line"><img src="assets/img/line.png" alt=""></p>
+                    <div class="places">
+                        <div class="map">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9511.249947659895!2d30.33665090854009!3d59.923944734902285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x56da541f94cf9547!2z0KfRg9GE0LDQu9GM0L3Rjw!5e0!3m2!1sru!2sru!4v1580898105059!5m2!1sru!2sru" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                        </div>
+                        <div class="contacts">
+                            <div class="contact-container">
+                                <h6 class="contact-type">Юридический адрес:</h6>
+                                <p class="contact-text">ООО «ИРВАС», 127411, г.Москва, Дмитровское<br>шоссе, д.125, корпус 1</p>
+                            </div>
+                            <div class="contact-container">
+                                <h6 class="contact-type">Фактический адрес:</h6>
+                                <p class="contact-text">ООО «ИРВАС», 141031, МО, Мытищинский р-он,<br>п.Вешки,Выставочная,д.53</p>
+                            </div>
+                            <div class="contact-container">
+                                <h6 class="contact-type">Телефон:</h6>
+                                <p class="contact-text"><a href="tel:+74956466171">+7 (495) 646-61- 71 </a>(многоканальный)</p>
+                            </div>
+                            <div class="contact-container">
+                                <h6 class="contact-type">E-mail:</h6>
+                                <p class="contact-text"><a href="mailto:info@irvasokna.ru" class="email">info@irvasokna.ru</a></p>
+                            </div>
+                            <div class="contact-container">
+                                <h6 class="contact-type">Режим работы:</h6>
+                                <p class="contact-text">9:00 - 18:00 без выходных</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!---------------------------------- question--------------------------- -->
+        <section class="questions">
+            Остались вопросы? <a href="tel:+74956466171">Спросите у нашего специалиста!</a>
+        </section>
+
+        <!---------------------------------- footer --------------------------- -->
+        <footer>
+            <div class="fixed-container">
+                <div class="footer-content">
+                    <div class="copyright">2017 © Ирвас окна<br>Работаем без выходных</div>
+                    <img src="assets/img/logo.png" alt="logo">
+                    <address class="footer-address">
+                        <a href="tel:+74956466171" class="footer-phone">+7 (495) 646-61-71</a>
+                        <a href="mailto:info@irvasokna.ru" class="email">info@irvasokna.ru</a>
+                    </address>
+                </div>
+            </div>
+        </footer>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="assets/script/script.js"></script>
+    <script src="assets/script/countdown.js"></script>
+    <script src="assets/script/jquery.maskedinput.js"></script>
+    <script src="assets/script/jquery.validatebox.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+
+</body>
+</html>

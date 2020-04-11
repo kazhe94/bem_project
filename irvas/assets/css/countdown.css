@@ -1,0 +1,19 @@
+.countdown {
+    display: flex;
+    justify-content: space-between;
+    width: 215px;
+}
+.countdown-time {
+    font-size: 28px;
+    display: inline-block;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: bold;
+    color: #fff;
+    padding: 10px 10px;
+    border-radius: 10px;
+    background: linear-gradient(to bottom, #393939, #141414);
+}
+.countdown-text {
+    display: block;
+    margin-top: 18px;
+}
