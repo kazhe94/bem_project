@@ -26,8 +26,6 @@ $( document ).ready(function() {
         spaceBetween: 30,
         slidesPerGroup: 1,
         loop: true,
-        centerSlides: true,
-        loopFillGroupWithBlank: true,
         navigation: {
           nextEl: '.arrow-right',
           prevEl: '.arrow-left',
@@ -38,9 +36,10 @@ $( document ).ready(function() {
           },
         breakpoints: {
             // when window width is >= 320px
-            320: {
+            0: {
               slidesPerView: 1,
               spaceBetween: 30,
+              centerSlides: true,
             },
             // when window width is >= 850px
             850: {

@@ -189,6 +189,10 @@ button {
 .phone {
     margin-right: 50px;
     font-weight: 700;
+    &:hover {
+        color: #f53f4f;
+        border-bottom: 1px solid #f53f4f;
+    }
     
     @media screen and (max-width: 767px) {
         font-size: 18px;
@@ -441,16 +445,15 @@ button {
 .portfolio {
     width: 100%;
 }
-.portfolio__slider {
-    display: flex;
-}
 .portfolio__item {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.portfolio__img {
+/* .portfolio__img {
     width: 100%;
     object-fit: scale-down;
-}
+} */
 .portfolio__item-description {
     text-align: center;
     margin-top: 38px;
@@ -474,7 +477,7 @@ button {
     border-radius: 50%;
     background-image: url(../img/arrow.png);
     &:hover {
-        box-shadow: inset 2px 0px 3px 1px #ff2f96;
+        box-shadow: inset 2px 0px 3px 1px grey;
     }
     &-left {
         left: 0;
@@ -533,29 +536,59 @@ button {
     }
 }
 .forth-block__elements {
-    display: none;
+    display: block;
     span {
         position: absolute;
-        top: 50%;
-        left: 50%;
         font-size: 35px;
         font-weight: bold;
     }
+    @media screen and (max-width: 1023px) {
+        display: none;
+    }
 }
 .element1 {
-    transform: translate(-700px, 100px) rotate(20deg) scale(1.3);
+    bottom: 62px;
+    left: 268px;
+    transform: rotate(20deg) scale(1.3);
+    @media screen and (max-width: 1310px) {
+        display: none;
+    }
 }
 .element2 {
-    transform: translate(-800px, -170px) rotate(20deg) scale(1.3);
+    top: 65px;
+    left: 128px;
+    transform: rotate(20deg) scale(1.2);
+    @media screen and (max-width: 1310px) {
+        top: 24px;
+        left: 110px;
+        transform: rotate(20deg) scale(1.0)
+    }
 }
 .element3 {
-    transform: translate(600px, -140px) rotate(-20deg) scale(0.8);
+    top: 80px;
+    right: 208px;
+    transform: rotate(-20deg) scale(0.9);
+    @media screen and (max-width: 1310px) {
+        top: 300px;
+        right: 95px;
+        transform: scale(1.2) rotate(-20deg);
+    }
 }
 .element4 {
-    transform: translate(700px, 100px) rotate(20deg) scale(1.1);
+    bottom: 50px;
+    right: 109px;
+    transform: rotate(-15deg) scale(1.1);
+    @media screen and (max-width: 1310px) {
+        display: none;
+    }
 }
 .element5 {
-    transform: translate(400px, 150px) rotate(20deg) scale(0.8);
+    bottom: 20px;
+    right: 412px;
+    transform: rotate(20deg) scale(0.8);
+    @media screen and (max-width: 1310px) {
+        bottom: 33px;
+    }
 }
 
 .footer__content {
@@ -578,7 +611,8 @@ button {
     }
 }
 .footer__link:hover {
-    color: red;   
+	color: #f53f4f;
+	border-bottom: 1px solid #f53f4f;
 }
 .footer__contacts {
     display: block;
@@ -592,7 +626,7 @@ button {
     display: block;
     text-align: left;
     &:hover {
-        color: red; 
+        color: #f53f4f; 
     }
 }
 .footer__phone {
@@ -628,10 +662,12 @@ button {
 .social__list {
     margin-top: 30px;
     display: flex;
-    justify-content: space-between;
+    @media screen and (max-width: 767px) {
+        margin-top: 0;
+    }
 }
 .social__list li {
-    margin-right: 20px;
+    margin-right: 30px;
     &:last-child {
         margin-right: 0;
     }
