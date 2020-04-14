@@ -626,18 +626,24 @@ button {
     display: block;
     text-align: left;
     &:hover {
-        color: #f53f4f; 
+        color: #f53f4f;
+        border-bottom: 1px solid #f53f4f;
     }
 }
 .footer__phone {
     margin-right: 0;
     padding-left: 30px;
+    display: inline-block;
+    border: 1px solid transparent;
+    padding-bottom: 3px;
     background: url(../img/callback_bg.png) no-repeat left 4px;
 }
 .footer__mail {
     padding-left: 38px;
     background: url(../img/callback_bg.png) no-repeat left -54px;
     margin-top: 34px;
+    border: 1px solid transparent;
+    padding-bottom: 3px;
     @media screen and (max-width: 767px) {
         margin-top: 25px;
         margin-bottom: 25px;
