@@ -54,6 +54,10 @@ $( document ).ready(function() {
           }
       });
       $('.get-form').on('click', function(){
+        
+        if($(this).hasClass('callback-btn') || $(this).hasClass('header__mobile-callback-btn')) {
+          $('.email-input').css('display', 'none')
+        }
           $('.modal').addClass('modal_active');
           $('body').addClass('stop-scroll');
       });
@@ -69,21 +73,5 @@ $( document ).ready(function() {
         });
 
       $('#phone-input').mask("+7(999)999-99-99");
-
-      $('#form').validate({
-        errorPlacement: function(error, element) {
-          return false
-      },
-        rules: {
-          name: {
-          required: true,
-          minlength: 3
-          },
-          phone: {
-            required: true,
-            minlength: 10
-          }
-        },
-      });
 });
 

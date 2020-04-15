@@ -5,12 +5,20 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Евгений Щербаков - создание сайтов</title>
 	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" href="css/swiper.min.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
 	<script src="js/jquery-3.4.1.min.js"></script>
-	<script src="js/send.js"></script>
 	<script src="js/jquery.validate.min.js"></script>
+	<script src="js/send.js"></script>
+	<script src="js/wow.min.js"></script>
+	<script>
+		wow = new WOW( {
+                      mobile: false
+                    })
+                    wow.init();
+	</script>
 </head>
 <body>
 	<!-- =============header============= -->
@@ -35,10 +43,10 @@
 	</header>
 
 	<!-- =============modal============= -->
-	<div class="modal">
+	<div class="modal modal1">
 		<div class="modal__form-wrapper">
 			<h3 class="modal__form-text">Укажите ваши контакты</h3>
-			<h5 class="modal__form-text">И я свяжусь с вами</h5>
+			<h5 class="modal__form-text">И мы свяжемся с вами</h5>
 			<form class="form" id="form" action="send.php" method="POST">
 				<label class="form__input-label" for="name-input">
 					<span>Как вас зовут?</span>
@@ -48,7 +56,7 @@
 					<span>Введите ваш номер телефона</span>
 					<input class="form__input" id="phone-input" type="tel" name="phone" placeholder="+7(___)-___-__-__">
 				</label>		
-				<label class="form__input-label" for="email-input">
+				<label class="form__input-label email-input" for="email-input">
 					<span>Введите ваш email</span>
 					<input class="form__input" id="email-input" type="email" name="email" placeholder="your_mail@example.com">
 				</label>			
@@ -78,9 +86,9 @@
 			<div class="fixed-container">
 				<div class="first-block__content">
 					<div class="first-block__text">
-						<h1 class="page-title">Евгений Щербаков</h1>
-						<h2 class="page-subtitle">Frontend-разработчик и верстальщик</h2>
-						<button class="more-btn get-form">Узнать больше</button>
+						<h1 class="page-title wow fadeInLeft" data-wow-delay="0.1s">Евгений Щербаков</h1>
+						<h2 class="page-subtitle wow fadeInLeft" data-wow-delay="0.2s">Frontend-разработчик и верстальщик</h2>
+						<button class="more-btn get-form wow fadeInLeft" data-wow-delay="0.3s">Узнать больше</button>
 					</div>
 				</div>	
 				<div class="img-wrapper">
@@ -91,7 +99,7 @@
 		</section>
 
 		<!-- =================second block==================== -->
-		<section class="second-block section" id="link-services">
+		<section class="second-block section wow bounceInRight" data-wow-offset="300" id="link-services">
 			<div class="fixed-container">
 				<div class="second-block__content  section-content">
 					<h3 class="section-title">Что я умею</h3>
@@ -121,7 +129,7 @@
 		</section>
 
 		<!-- =====================3rd block==================== -->
-		<section class="third-block section" id="link-portfolio">
+		<section class="third-block section wow bounceInLeft" data-wow-offset="300" id="link-portfolio">
 			<div class="fixed-container">
 				<div class="third-block__content section-content">
 					<h3 class="section-title">Примеры моих работ</h3>
@@ -150,7 +158,7 @@
 		</section>
 
 		<!-- =====================4th block==================== -->
-		<section class="forth-block section" id="link-prices">
+		<section class="forth-block section wow bounceInRight" data-wow-offset="300" id="link-prices">
 			<div class="forth-block__text">
 				<h3 class="forth-block__title">Адаптивная вёрстка под все устройства	и&nbsp;браузеры от 1000 рублей всего за 4&nbsp;часа.*</h3>
 				<p class="forth-block__subtitle">* Срок и стоимость могут отличаться от заявленных и рассчитываются  индивидуально,<br>в зависимости от сложности задач.</p>
@@ -167,7 +175,7 @@
 
 
 	<!-- =====================footer==================== -->
-	<footer class="footer">
+	<footer class="footer wow bounceInLeft" data-wow-duration="1s">
 		<div class="fixed-container">
 			<div class="footer__content">
 				<nav class="footer__nav">
@@ -199,6 +207,8 @@
 	<script src="js/swiper.min.js"></script>
 	<script src="js/script.js"></script>
 	<script src="js/jquery.maskedinput.min.js"></script>
+	<script src="js/wow.min.js"></script>
+	
 		
 </body>
 </html>
