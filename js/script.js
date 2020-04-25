@@ -53,22 +53,27 @@ $( document ).ready(function() {
             }
           }
       });
+      function closeModal () {
+        $('.modal').removeClass('modal_active');
+        $('body').removeClass('stop-scroll');
+        $('.form__input').removeClass('error')
+      };
       $('.get-form').on('click', function(){
         
         if($(this).hasClass('callback-btn') || $(this).hasClass('header__mobile-callback-btn')) {
           $('.email-input').css('display', 'none')
+        } else {
+          $('.email-input').css('display', 'block')
         }
           $('.modal').addClass('modal_active');
           $('body').addClass('stop-scroll');
       });
       $('.modal__close-button').on('click', function(){
-        $('.modal').removeClass('modal_active');
-        $('body').removeClass('stop-scroll');
+        closeModal();
       });
       $('.modal').on('click', function(event){
         if (event.target == this) {
-          $('.modal').removeClass('modal_active');
-          $('body').removeClass('stop-scroll');
+          closeModal();
         }
         });
 

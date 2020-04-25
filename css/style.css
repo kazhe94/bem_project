@@ -2,6 +2,7 @@
 @import url(../css/elements.css);
 @font-face {
   font-family: 'Roboto';
+  font-display: optional;
   font-style: normal;
   font-weight: 300;
   src: url("../fonts/roboto-v20-latin_cyrillic-300.eot");
@@ -12,6 +13,7 @@
 /* roboto-regular - latin_cyrillic */
 @font-face {
   font-family: 'Roboto';
+  font-display: optional;
   font-style: normal;
   font-weight: 400;
   src: url("../fonts/roboto-v20-latin_cyrillic-regular.eot");
@@ -22,6 +24,7 @@
 /* roboto-700 - latin_cyrillic */
 @font-face {
   font-family: 'Roboto';
+  font-display: optional;
   font-style: normal;
   font-weight: 700;
   src: url("../fonts/roboto-v20-latin_cyrillic-700.eot");
@@ -32,6 +35,7 @@
 /* roboto-900 - latin_cyrillic */
 @font-face {
   font-family: 'Roboto';
+  font-display: optional;
   font-style: normal;
   font-weight: 900;
   src: url("../fonts/roboto-v20-latin_cyrillic-900.eot");
@@ -341,7 +345,11 @@ button {
       padding: 20px 0; } }
 
 .img-wrapper {
-  max-width: 435px; }
+  max-width: 435px;
+  margin-right: -80px; }
+  @media screen and (max-width: 1024px) {
+    .img-wrapper {
+      margin-right: 0; } }
 
 .img-wrapper__photo {
   -o-object-fit: contain;
@@ -363,7 +371,7 @@ button {
   object-fit: contain;
   z-index: 0;
   bottom: 0;
-  right: 0; }
+  right: -80px; }
   @media screen and (max-width: 1100px) {
     .img-wrapper__background {
       right: -30%;
@@ -498,10 +506,10 @@ button {
   -ms-flex-align: center;
   align-items: center; }
 
-/* .portfolio__img {
-    width: 100%;
-    object-fit: scale-down;
-} */
+@media screen and (max-width: 400px) {
+  .portfolio__img {
+    width: 100%; } }
+
 .portfolio__item-description {
   text-align: center;
   margin-top: 38px;
@@ -515,13 +523,14 @@ button {
 
 .arrow {
   position: absolute;
+  border: none;
   width: 60px;
   height: 60px;
   top: 60%;
   outline: none;
   z-index: 10;
-  -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.08);
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.08);
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
   cursor: pointer;
   border-radius: 50%;
   background-image: url(../img/arrow.png); }
